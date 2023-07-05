@@ -2,6 +2,8 @@ package application;
 
 import java.util.Scanner;
 
+import challenges.Challenge1;
+
 public class Main {
 	public static Scanner sc = new Scanner(System.in);
 	public static int option = 0;
@@ -18,6 +20,10 @@ public class Main {
 			System.out.println("");
 			switch(option) {
 				case 1:
+					if(testCase)
+						Challenge1.showTestCase();
+					else
+						Challenge1.showChallenge();
 					break;
 				case 2:
 					break;
@@ -29,7 +35,8 @@ public class Main {
 					break;
 			}
 			
-			System.out.println("\n --------------------------------- \n");
+			sc.nextLine();
+			System.out.println("--------------------------------- \n");
 		}
 		
 		System.out.println("Sistema encerrado.");
@@ -43,6 +50,9 @@ public class Main {
 				System.out.println("Deseja ver o caso de teste? Digite 1 para Sim e 0 para Não");
 				System.out.print("Escolha: ");
 				test = sc.nextInt() == 1;
+				
+				//Irá consumir o conteúdo no buffer
+				sc.nextLine();
 				break;
 			}catch(Exception e) {
 				System.out.println("Parece que houve um erro! Tente novamente.");
@@ -60,7 +70,7 @@ public class Main {
 	 * Função responsável por mostrar uma apresentação para o usuário
 	 */
 	private static void showIntroduction() {
-		System.out.println("Olá, esse é o desafio de código da PWC! Que tal começar digitando o desafio que deseja ver?");
+		System.out.println("Olá, esse é o desafio de código da PWC! Que tal começar digitando o desafio que deseja ver?\n");
 	}
 	
 	/*
@@ -68,9 +78,9 @@ public class Main {
 	 */
 	private static boolean showOptions() {
 		System.out.println("Digite o número do desafio que queira executar!");
-		System.out.println("Desafio 1 - Reversão de Ordem");
+		System.out.println("	•Desafio 1 - Reversão de Ordem");
 		
-		System.out.println("Digite 0 para encerrar o sistema.");
+		System.out.println("	•Digite 0 para encerrar o sistema.\n");
 		
 		while(true) {
 			try{
@@ -84,6 +94,7 @@ public class Main {
 				//Consome o que está no buffer
 				sc.next();
 			}
+			
 		}
 				
 		return option != 0;
