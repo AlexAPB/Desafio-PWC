@@ -21,6 +21,12 @@ public class Challenge2 {
 		}
 	}
 	
+	/*
+	 * Função responsável por remover as letras duplicatas,
+	 * irá receber a frase e separá-la em letras, e passar em um laço for
+	 * para verificar se a letra já foi escrita ou não - ou se é exceção.
+	 * após isso irá adicionar a letra à string caso não tenha sido usada
+	 */
 	public static String remove(String phrase) {
 		char[] letters = phrase.toCharArray();
 		String usedLetters = new String();

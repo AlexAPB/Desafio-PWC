@@ -12,6 +12,7 @@ public class Main {
 	public static void main(String[] args) {
 		showIntroduction();
 		
+		//Enquanto o usuário não digitar 0, não sairá da função
 		while(showOptions()) {
 			boolean testCase = testCase();
 			
@@ -47,6 +48,9 @@ public class Main {
 		System.out.println("Sistema encerrado.");
 	}
 	
+	/*
+	 * Função responsável por perguntar ao usuário se ele deseja ver o teste de caso
+	 */
 	public static boolean testCase() {
 		boolean test = false;
 		

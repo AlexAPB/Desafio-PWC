@@ -21,6 +21,10 @@ public class Challenge1 {
 		}
 	}
 	
+	/*
+	 * Função responsável por reverter a ordem das frases
+	 * irá separar a frase pelos espaços e passar as palavras em um for inverso para uma string
+	 */
 	public static String revert(String phrase) {
 		String[] phrases = phrase.split(" ");
 		
