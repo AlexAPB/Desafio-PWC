@@ -13,7 +13,7 @@ public class Challenge3 {
 		while(true) {
 			try {
 				System.out.print("Digite a frase/palavra para a busca do palíndromo: ");
-				String word = repeat(Main.sc.nextLine().toLowerCase());
+				String word = repeat(Main.sc.nextLine().toLowerCase().trim());
 				
 				System.out.println("Palíndromo: " + word);
 				break;

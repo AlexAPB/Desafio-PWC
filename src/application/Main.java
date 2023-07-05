@@ -5,6 +5,7 @@ import java.util.Scanner;
 import challenges.Challenge1;
 import challenges.Challenge2;
 import challenges.Challenge3;
+import challenges.Challenge4;
 
 public class Main {
 	public static Scanner sc = new Scanner(System.in);
@@ -18,7 +19,7 @@ public class Main {
 			boolean testCase = testCase();
 			
 			System.out.println();
-			System.out.println("Ótimo! Você escolheu o Desafio " + option + ".");
+			System.out.println("Ótimo! Você escolheu o Desafio " + option + ". Pressione enter apenas após obter o resultado desejado para prosseguir!");
 
 			System.out.println("");
 			switch(option) {
@@ -41,6 +42,10 @@ public class Main {
 						Challenge3.showChallenge();
 					break;
 				case 4:
+					if(testCase)
+						Challenge4.showTestCase();
+					else
+						Challenge4.showChallenge();
 					break;
 				case 5:
 					break;
@@ -95,6 +100,7 @@ public class Main {
 		System.out.println("	•Desafio 1 - Reversão de Ordem");
 		System.out.println("	•Desafio 2 - Remoção de Duplicatas");
 		System.out.println("	•Desafio 3 - Busca de Palíndromo");
+		System.out.println("	•Desafio 4 - Correção de Letras");
 		
 		System.out.println("	•Digite 0 para encerrar o sistema.\n");
 		
