@@ -13,7 +13,7 @@ public class Challenge1 {
 				System.out.println("Digite a frase a ser revertida: ");
 				String phrase = Main.sc.nextLine();
 				
-				System.out.println(revert(phrase));
+				System.out.println(revert(phrase.trim()));
 				break;
 			}catch(Exception e) {
 				System.out.println("Houve um erro! Que tal tentar novamente?");

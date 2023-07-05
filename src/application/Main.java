@@ -3,6 +3,7 @@ package application;
 import java.util.Scanner;
 
 import challenges.Challenge1;
+import challenges.Challenge2;
 
 public class Main {
 	public static Scanner sc = new Scanner(System.in);
@@ -26,6 +27,10 @@ public class Main {
 						Challenge1.showChallenge();
 					break;
 				case 2:
+					if(testCase)
+						Challenge2.showTestCase();
+					else
+						Challenge2.showChallenge();
 					break;
 				case 3:
 					break;
@@ -79,6 +84,7 @@ public class Main {
 	private static boolean showOptions() {
 		System.out.println("Digite o número do desafio que queira executar!");
 		System.out.println("	•Desafio 1 - Reversão de Ordem");
+		System.out.println("	•Desafio 2 - Remoção de Duplicatas");
 		
 		System.out.println("	•Digite 0 para encerrar o sistema.\n");
 		
