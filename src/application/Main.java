@@ -6,6 +6,7 @@ import challenges.Challenge1;
 import challenges.Challenge2;
 import challenges.Challenge3;
 import challenges.Challenge4;
+import challenges.Challenge5;
 
 public class Main {
 	public static Scanner sc = new Scanner(System.in);
@@ -48,6 +49,10 @@ public class Main {
 						Challenge4.showChallenge();
 					break;
 				case 5:
+					if(testCase)
+						Challenge5.showTestCase();
+					else
+						Challenge5.showChallenge();
 					break;
 			}
 			
@@ -101,6 +106,7 @@ public class Main {
 		System.out.println("	•Desafio 2 - Remoção de Duplicatas");
 		System.out.println("	•Desafio 3 - Busca de Palíndromo");
 		System.out.println("	•Desafio 4 - Correção de Letras");
+		System.out.println("	•Desafio 5 - Anagrama de Palíndromo");
 		
 		System.out.println("	•Digite 0 para encerrar o sistema.\n");
 		

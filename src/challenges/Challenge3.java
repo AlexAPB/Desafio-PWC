@@ -56,7 +56,7 @@ public class Challenge3 {
 	/*
 	 * Função responsável por separar a frase em letra por letra em um array de char.
 	 * Irá transformar a frase em um array de char e percorrer ele de trás para frente no laço for, 
-	 * adicionando as letras a uma string
+	 * adicionando as letras a um outro array
 	 */
 	public static char[] invert(String phrase) {
 		char[] letters = phrase.toCharArray();
