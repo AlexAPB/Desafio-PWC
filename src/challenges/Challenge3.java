@@ -1,24 +1,33 @@
 package challenges;
 
+import javax.swing.JOptionPane;
+
 import application.Main;
 
 public class Challenge3 {
 	public static void showTestCase() {
-		String word = repeat("babad");
+		String word = "babad";
 		
-		System.out.println("Palíndromo: " + word);	
+		JOptionPane.showMessageDialog(null, "Input: " + word + "\n\nOutput: " + repeat(word));
 	}
 
 	public static void showChallenge() {
 		while(true) {
 			try {
-				System.out.print("Digite a frase/palavra para a busca do palíndromo: ");
-				String word = repeat(Main.sc.nextLine().toLowerCase().trim());
+				String word = JOptionPane.showInputDialog("Digite a frase/palavra para a busca do palíndromo:")
+								.toLowerCase()
+								.trim();
 				
-				System.out.println("Palíndromo: " + word);
+				if(word == null)
+					break;
+				
+				if(word.isEmpty())
+					continue;
+				
+				JOptionPane.showMessageDialog(null, "Input: " + word + "\n\nOutput: " + repeat(word));
 				break;
-			}catch(Exception e) {
-				System.out.println("Houve um erro! Que tal tentar novamente?");
+			} catch(Exception e) {
+				JOptionPane.showMessageDialog(null, "Houve um erro! Que tal tentar novamente?", null, JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}

@@ -1,5 +1,7 @@
 package challenges;
 
+import javax.swing.JOptionPane;
+
 import application.Main;
 
 public class Challenge5 {
@@ -7,20 +9,25 @@ public class Challenge5 {
 		String word = "racecar";
 		String inverted = invert(word);
 		
-		System.out.println(word + "\n" + word.equals(inverted));	
+		JOptionPane.showMessageDialog(null, "Input: " + word + "\n\nOutput: " + inverted.equals(word));
 	}
 
 	public static void showChallenge() {
 		while(true) {
 			try {
-				System.out.print("Digite a frase/palavra para a verificação de anagrama: ");
-				String word = Main.sc.nextLine().toLowerCase().trim();
-				String reverted = invert(word);
+				String word = JOptionPane.showInputDialog("Digite a frase/palavra para a verificação de anagrama: ").trim();
+				String inverted = invert(word);
 				
-				System.out.println(word + "\n" + reverted.equals(word));
+				if(word == null)
+					break;
+				
+				if(word.isEmpty())
+					continue;
+				
+				JOptionPane.showMessageDialog(null, "Input: " + word + "\n\nOutput: " + inverted.equals(word));
 				break;
-			}catch(Exception e) {
-				System.out.println("Houve um erro! Que tal tentar novamente?");
+			} catch(Exception e) {
+				JOptionPane.showMessageDialog(null, "Houve um erro! Que tal tentar novamente?", null, JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}	
