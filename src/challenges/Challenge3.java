@@ -41,17 +41,14 @@ public class Challenge3 {
 	 * A função irá transformar todas as letras em minúsculas para aprimorar a busca
 	 */
 	public static String repeat(String phrase) {
-		char[] inverted = invert(phrase);
+		String invertedPhrase = invert(phrase);
+		char[] inverted = invert(phrase).toCharArray();
 		String repetition = new String();
 		
 		for(int i = 0; i < inverted.length; i++) {			
 			for(int j = i; j < inverted.length; j++) {
-				String temp = new String();
+				String temp = invertedPhrase.substring(i, j+1);
 
-				for(int k = i; k <= j; k++) {
-					temp += inverted[k];
-				}
-				
 				if(phrase.contains(temp) && temp.length() >= repetition.length()) {
 					repetition = temp;
 				}
@@ -67,14 +64,13 @@ public class Challenge3 {
 	 * Irá transformar a frase em um array de char e percorrer ele de trás para frente no laço for, 
 	 * adicionando as letras a um outro array
 	 */
-	public static char[] invert(String phrase) {
+	public static String invert(String phrase) {
 		char[] letters = phrase.toCharArray();
 		
-		char[] inverted = new char[letters.length];
-		int index = 0;
+		String inverted = new String();
 		
 		for(int i = letters.length - 1; i >= 0; i--) {
-			inverted[index++] = letters[i];
+			inverted += letters[i];
 		}
 		
 		return inverted;
