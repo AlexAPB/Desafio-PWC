@@ -1,31 +1,22 @@
 package challenges;
 
-import javax.swing.JOptionPane;
-
 import application.Main;
 
 public class Challenge2 {
 	public static void showTestCase() {
-		String phrase = "Hello, World!";
-		
-		JOptionPane.showMessageDialog(null, "Input: " + phrase + "\n\nOutput: " + remove(phrase));
+		System.out.println(remove("Hello, World!"));
 	}
 
 	public static void showChallenge() {
 		while(true) {
 			try {
-				String phrase = JOptionPane.showInputDialog("Digite a frase para a remoção de duplicatas:");
+				System.out.print("Digite a frase para a remoção de duplicatas: ");
+				String phrase = Main.sc.nextLine();
 				
-				if(phrase == null)
-					break;
-				
-				if(phrase.isEmpty())
-					continue;
-					
-				JOptionPane.showMessageDialog(null, "Input: " + phrase + "\n\nOutput: " + remove(phrase.trim()));
+				System.out.println(remove(phrase.trim()));
 				break;
-			} catch(Exception e) {
-				JOptionPane.showMessageDialog(null, "Houve um erro! Que tal tentar novamente?", null, JOptionPane.ERROR_MESSAGE);
+			}catch(Exception e) {
+				System.out.println("Houve um erro! Que tal tentar novamente?");
 			}
 		}
 	}

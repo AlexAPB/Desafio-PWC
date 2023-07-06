@@ -1,31 +1,24 @@
 package challenges;
 
-import javax.swing.JOptionPane;
-
 import application.Main;
 
 public class Challenge4 {
 	public static void showTestCase() {
-		String phrase ="hello. how are you? i'm fine, thank you.";
+		String phrase = getCorrect("hello. how are you? i'm fine, thank you.");
 		
-		JOptionPane.showMessageDialog(null, "Input: " + phrase + "\n\nOutput: " + getCorrect(phrase));
+		System.out.println(phrase);	
 	}
 
 	public static void showChallenge() {
 		while(true) {
 			try {
-				String phrase = JOptionPane.showInputDialog("Digite a frase para a mudança de letras:").trim();
+				System.out.print("Digite a frase para a mudança de letras: ");
+				String phrase = getCorrect(Main.sc.nextLine().trim());
 				
-				if(phrase == null)
-					break;
-				
-				if(phrase.isEmpty())
-					continue;
-				
-				JOptionPane.showMessageDialog(null, "Input: " + phrase + "\n\nOutput: " + getCorrect(phrase));
+				System.out.println(phrase);
 				break;
-			} catch(Exception e) {
-				JOptionPane.showMessageDialog(null, "Houve um erro! Que tal tentar novamente?", null, JOptionPane.ERROR_MESSAGE);
+			}catch(Exception e) {
+				System.out.println("Houve um erro! Que tal tentar novamente?");
 			}
 		}
 	}

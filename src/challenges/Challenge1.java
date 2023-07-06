@@ -1,31 +1,22 @@
 package challenges;
 
-import javax.swing.JOptionPane;
-
 import application.Main;
 
 public class Challenge1 {
 	public static void showTestCase() {
-		String phrase = "Hello, World! OpenAI is amazing.";
-		
-		JOptionPane.showMessageDialog(null, "Input: " + phrase + "\n\nOutput: " + revert(phrase));
+		System.out.println(revert("Hello, World! OpenAI is amazing."));
 	}
 
 	public static void showChallenge() {
 		while(true) {
 			try {
-				String phrase = JOptionPane.showInputDialog("Digite a frase a ser revertida:");
+				System.out.println("Digite a frase a ser revertida: ");
+				String phrase = Main.sc.nextLine();
 				
-				if(phrase == null)
-					break;
-				
-				if(phrase.isEmpty())
-					continue;
-					
-				JOptionPane.showMessageDialog(null, "Input: " + phrase + "\n\nOutput: " + revert(phrase).trim());
+				System.out.println(revert(phrase.trim()));
 				break;
-			} catch(Exception e) {
-				JOptionPane.showMessageDialog(null, "Houve um erro! Que tal tentar novamente?", null, JOptionPane.ERROR_MESSAGE);
+			}catch(Exception e) {
+				System.out.println("Houve um erro! Que tal tentar novamente?");
 			}
 		}
 	}
