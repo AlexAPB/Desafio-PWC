@@ -9,3 +9,5 @@ Esse programa possui uma interface gráfica completa onde o usuário poderá exe
 	+ Encontrar a substring palíndroma mais longa em uma palavra;
 	+ Colocar em maiúscula a primeira letra de cada frase em uma string;
 	+ Verificar se uma determinada palavra/frase é um anagrama deu um palíndromo.
+
+Cada desafio se encontra em uma classe diferente, sendo o desafio 1 a classe Challenge1.java e por aí vai.
